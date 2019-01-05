@@ -4,6 +4,6 @@ export class CharacterDecomposition {
 
   constructor(parts?: string, characters?: string) {
     this.Parts = parts || '';
-    this.Characters = characters || '测试';
+    this.Characters = characters || '';
   }
 }

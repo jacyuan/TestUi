@@ -25,9 +25,7 @@ export class CharacterDecompositionComponent implements OnInit {
   ) {}
 
   ngOnInit() {
-    this.characterDecomposition = new CharacterDecomposition();
-    this.characterDecompositionHtml = null;
-    this.isLoading = false;
+    this.reset();
   }
 
   public canConfirm(): boolean {
@@ -93,6 +91,12 @@ export class CharacterDecompositionComponent implements OnInit {
         await this.generateDecompositions(requestDto);
       }
     }
+  }
+
+  public reset(): void {
+    this.characterDecomposition = new CharacterDecomposition();
+    this.characterDecompositionHtml = null;
+    this.isLoading = false;
   }
 
   private async generateDecompositions(data: CharacterDecompositionWithPrononciations) {
