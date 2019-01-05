@@ -96,8 +96,9 @@ export class CharacterDecompositionComponent implements OnInit {
   }
 
   private async generateDecompositions(data: CharacterDecompositionWithPrononciations) {
+    this.characterDecompositionHtml = null;
     const res = await this.characterDecompositionService.GetDecompositions(data);
-    this.characterDecompositionHtml = res.HtmlContent;
+    this.characterDecompositionHtml = res.SvgContent;
   }
 
   private startLoading() {

@@ -1,3 +1,3 @@
 export class CharacterDecompositionHtml {
-  HtmlContent: string;
+  SvgContent: string;
 }

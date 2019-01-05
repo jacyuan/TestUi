@@ -1,4 +1,4 @@
-<form>
+<form class="text-center">
   <div class="form-group">
     <label for="characterParts">偏旁部首:</label>
     <input
@@ -32,11 +32,13 @@
     class="btn btn-default"
     id="commitCharacterDecomposition"
     name="commitCharacterDecomposition"
-    [disabled]='!canConfirm()'
-    (click)='confirm()'
+    [disabled]="!canConfirm()"
+    (click)="confirm()"
   >
     生成
   </button>
 </form>
 
-<div [innerHTML]="characterDecompositionHtml"></div>
+<div *ngIf="characterDecompositionHtml">
+  <div *appRxnToImage="characterDecompositionHtml"></div>
+</div>

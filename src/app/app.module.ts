@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { ComponentsModule } from './components/components.module';
-import { CommonModule } from './common/common.module';
+import { AppCommonModule } from './common/app.common.module';
 import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
@@ -15,7 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
     // import HttpClientModule after BrowserModule.
     HttpClientModule,
     ComponentsModule,
-    CommonModule
+    AppCommonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
