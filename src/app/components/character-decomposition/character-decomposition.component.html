@@ -1,0 +1,42 @@
+<form>
+  <div class="form-group">
+    <label for="characterParts">偏旁部首:</label>
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="characterDecomposition.Parts"
+      id="characterParts"
+      name="characterParts"
+    />
+  </div>
+  <div class="form-group">
+    <label for="characters">其他生词:</label>
+    <input
+      type="text"
+      class="form-control"
+      [(ngModel)]="characterDecomposition.Characters"
+      id="characters"
+      name="characters"
+    />
+  </div>
+  <button
+    type="reset"
+    class="btn btn-default"
+    id="resetCharacterDecomposition"
+    name="resetCharacterDecomposition"
+  >
+    重置
+  </button>
+  <button
+    type="submit"
+    class="btn btn-default"
+    id="commitCharacterDecomposition"
+    name="commitCharacterDecomposition"
+    [disabled]='!canConfirm()'
+    (click)='confirm()'
+  >
+    生成
+  </button>
+</form>
+
+<div [innerHTML]="characterDecompositionHtml"></div>

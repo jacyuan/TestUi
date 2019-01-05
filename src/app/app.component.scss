@@ -1,0 +1,13 @@
+ul.header-menu {
+  padding: 0;
+
+  li {
+    display: inline;
+    margin-left: 10px;
+  }
+
+  li:not(:last-child):after {
+    margin-left: 10px;
+    content: ' - ';
+  }
+}
