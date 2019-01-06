@@ -1,45 +1,51 @@
-<form class="text-center">
-  <div class="form-group">
-    <label for="characterParts">偏旁部首:</label>
-    <input
-      type="text"
-      class="form-control"
-      [(ngModel)]="characterDecomposition.Parts"
-      id="characterParts"
-      name="characterParts"
-    />
-  </div>
-  <div class="form-group">
-    <label for="characters">其他生词:</label>
-    <input
-      type="text"
-      class="form-control"
-      [(ngModel)]="characterDecomposition.Characters"
-      id="characters"
-      name="characters"
-    />
-  </div>
-  <button
-    type="reset"
-    class="btn btn-default"
-    id="resetCharacterDecomposition"
-    name="resetCharacterDecomposition"
-    (click)="reset()"
-  >
-    重置
-  </button>
-  <button
-    type="submit"
-    class="btn btn-default"
-    id="commitCharacterDecomposition"
-    name="commitCharacterDecomposition"
-    [disabled]="!canConfirm()"
-    (click)="confirm()"
-  >
-    生成
-  </button>
-</form>
+<div class="center">
+  <app-loader *ngIf="isLoading"></app-loader>
 
-<div *ngIf="characterDecompositionHtml">
-  <div *appRxnToImage="characterDecompositionHtml"></div>
+  <form>
+    <fieldset [disabled]="isLoading">
+      <div class="form-group">
+        <label for="characterParts">偏旁部首:</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="characterDecomposition.Parts"
+          id="characterParts"
+          name="characterParts"
+        />
+      </div>
+      <div class="form-group">
+        <label for="characters">其他生词:</label>
+        <input
+          type="text"
+          class="form-control"
+          [(ngModel)]="characterDecomposition.Characters"
+          id="characters"
+          name="characters"
+        />
+      </div>
+      <button
+        type="reset"
+        class="btn btn-default"
+        id="resetCharacterDecomposition"
+        name="resetCharacterDecomposition"
+        (click)="reset()"
+      >
+        重置
+      </button>
+      <button
+        type="submit"
+        class="btn btn-default"
+        id="commitCharacterDecomposition"
+        name="commitCharacterDecomposition"
+        [disabled]="!canConfirm()"
+        (click)="confirm()"
+      >
+        生成
+      </button>
+    </fieldset>
+  </form>
+
+  <div *ngIf="characterDecompositionHtml && !isLoading">
+    <div *appRxnToImage="characterDecompositionHtml"></div>
+  </div>
 </div>

@@ -103,6 +103,7 @@ export class CharacterDecompositionComponent implements OnInit {
     this.characterDecompositionHtml = null;
     const res = await this.characterDecompositionService.GetDecompositions(data);
     this.characterDecompositionHtml = res.SvgContent;
+    this.stopLoading();
   }
 
   private startLoading() {
