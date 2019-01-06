@@ -5,7 +5,7 @@ pipeline{
     stage('restore & build'){
       steps{
         sh "npm i"
-        sh "npm run build"
+        sh "npm run build-dev"
       }
     }
   }
