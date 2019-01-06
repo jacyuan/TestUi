@@ -49,7 +49,7 @@
           },
           "configurations": {
             "production": {
-              "browserTarget": "ChineseLanguageToolsUI:build:production"
+              "browserTarget": "ChineseLanguageToolsUI:build:production",
             }
           }
         },
@@ -81,7 +81,6 @@
       }
     }
   },
-
   "schematics": {
     "@schematics/angular:component": {
       "styleext": "scss",

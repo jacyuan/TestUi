@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { APP_CONFIG } from '@config/app.config';
+import { environment } from '@environment/environment';
 import { HttpClient } from '@angular/common/http';
 import { CharacterDecompositionWithPrononciations } from '@common/models/character-decomposition-with-prononciations';
 import { CharacterDecompositionHtml } from '@common/models/character-decomposition-html';
@@ -8,7 +8,7 @@ import { CharacterDecompositionHtml } from '@common/models/character-decompositi
   providedIn: 'root'
 })
 export class CharacterDecompositionService {
-  private baseUrl = `${APP_CONFIG.rootUrl}CharactorDecompositions/`;
+  private baseUrl = `${environment.rootUrl}CharactorDecompositions/`;
 
   constructor(private http: HttpClient) {}
 
