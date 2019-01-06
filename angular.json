@@ -45,11 +45,12 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "ChineseLanguageToolsUI:build"
+            "browserTarget": "ChineseLanguageToolsUI:build",
+            "port": 4200
           },
           "configurations": {
             "production": {
-              "browserTarget": "ChineseLanguageToolsUI:build:production",
+              "browserTarget": "ChineseLanguageToolsUI:build:production"
             }
           }
         },

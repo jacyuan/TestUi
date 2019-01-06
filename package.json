@@ -3,9 +3,11 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
+    "serve": "ng serve --host 0.0.0.0",
     "serve-dev": "ng serve --open",
     "serve-prod": "ng serve -c production --open",
-    "build": "ng build",
+    "build-dev": "ng build",
+    "build-prod": "ng build --prod",
     "lint": "ng lint"
   },
   "private": true,

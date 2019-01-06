@@ -8,7 +8,7 @@ import { CharacterDecompositionHtml } from '@common/models/character-decompositi
   providedIn: 'root'
 })
 export class CharacterDecompositionService {
-  private baseUrl = `${environment.rootUrl}CharactorDecompositions/`;
+  private baseUrl = `${environment.rootUrl}/api/CharactorDecompositions/`;
 
   constructor(private http: HttpClient) {}
 

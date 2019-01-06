@@ -1,0 +1,5 @@
+FROM nginx:alpine
+RUN rm -rf /usr/share/nginx/html
+COPY ./dist/ChineseLanguageToolsUI/ /usr/share/nginx/html
+
+#docker run --name myContainerName -d -p 8080:80 myImageName

@@ -7,7 +7,7 @@ import { CharacterPrononciations } from '@common/models/character-prononciations
   providedIn: 'root'
 })
 export class CharacterPrononciationsService {
-  private baseUrl = `${environment.rootUrl}SentencePrononciations/`;
+  private baseUrl = `${environment.rootUrl}/api/SentencePrononciations/`;
 
   constructor(private http: HttpClient) {}
 
